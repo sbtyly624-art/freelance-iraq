@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل الفريلانس العراقي 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1a1a2e;
+    --accent: #e94560;
+    --gold: #f5a623;
+    --light-bg: #f8f9ff;
+    --card-bg: #ffffff;
+    --text: #2d2d2d;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--light-bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* ===== COVER PAGE ===== */
+  .cover {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 2px solid rgba(233,69,96,0.15);
+    top: -200px; right: -200px;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    border: 2px solid rgba(245,166,35,0.1);
+    bottom: -100px; left: -100px;
+  }
+
+  .cover-badge {
+    background: var(--accent);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  .cover-title {
+    font-size: 52px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .cover-title span {
+    color: var(--gold);
+    display: block;
+  }
+
+  .cover-subtitle {
+    font-size: 20px;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 50px;
+  }
+
+  .cover-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 30px auto;
+    border-radius: 2px;
+  }
+
+  .cover-stats {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .cover-stat {
+    text-align: center;
+  }
+
+  .cover-stat .num {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--gold);
+    display: block;
+  }
+
+  .cover-stat .lbl {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .cover-year {
+    margin-top: 60px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ===== TOC PAGE ===== */
+  .toc-page {
+    background: white;
+    padding: 60px 80px;
+    min-height: 100vh;
+    page-break-after: always;
+  }
+
+  .toc-header {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .toc-header span {
+    color: var(--accent);
+  }
+
+  .toc-underline {
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin-bottom: 40px;
+    border-radius: 2px;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--border);
+    gap: 16px;
+  }
+
+  .toc-num {
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .toc-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .toc-dots {
+    flex: 1;
+    border-bottom: 2px dotted var(--border);
+    margin: 0 10px;
+    min-width: 40px;
+  }
+
+  /* ===== MAIN CONTENT ===== */
+  .chapter {
+    background: white;
+    padding: 60px 80px;
+    min-height: 100vh;
+    page-break-before: always;
+  }
+
+  .chapter-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .chapter-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .chapter-title span { color: var(--accent); }
+
+  .chapter-bar {
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin-bottom: 40px;
+    border-radius: 2px;
+  }
+
+  .lead-text {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 40px;
+    padding: 24px 28px;
+    background: var(--light-bg);
+    border-right: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 36px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h3::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: var(--text);
+    line-height: 1.9;
+  }
+
+  /* ===== CARDS ===== */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 24px 0;
+  }
+
+  .card {
+    background: var(--light-bg);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid var(--border);
+  }
+
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ===== PROS/CONS TABLE ===== */
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .pros, .cons {
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .pros {
+    background: rgba(16,185,129,0.08);
+    border: 1px solid rgba(16,185,129,0.2);
+  }
+
+  .cons {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+
+  .pros-title, .cons-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pros-title { color: var(--success); }
+  .cons-title { color: var(--danger); }
+
+  .pros li, .cons li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ===== PLATFORM CARDS ===== */
+  .platform-card {
+    border-radius: 16px;
+    padding: 28px;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .platform-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 6px;
+    height: 100%;
+  }
+
+  .platform-card.available::before { background: var(--success); }
+  .platform-card.limited::before { background: var(--warning); }
+  .platform-card.unavailable::before { background: var(--danger); }
+
+  .platform-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .platform-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  .platform-badge {
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .badge-available { background: rgba(16,185,129,0.15); color: var(--success); }
+  .badge-limited { background: rgba(245,158,11,0.15); color: var(--warning); }
+  .badge-unavailable { background: rgba(239,68,68,0.15); color: var(--danger); }
+
+  .platform-desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* ===== PAYMENT CARDS ===== */
+  .payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .payment-card {
+    border-radius: 16px;
+    padding: 24px;
+    border: 2px solid var(--border);
+  }
+
+  .payment-card.recommended {
+    border-color: var(--success);
+    background: rgba(16,185,129,0.04);
+  }
+
+  .payment-card.secondary {
+    border-color: #3b82f6;
+    background: rgba(59,130,246,0.04);
+  }
+
+  .payment-card.warning {
+    border-color: var(--warning);
+    background: rgba(245,158,11,0.04);
+  }
+
+  .payment-card.danger {
+    border-color: var(--danger);
+    background: rgba(239,68,68,0.04);
+  }
+
+  .payment-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--primary);
+  }
+
+  .payment-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .tag-green { background: rgba(16,185,129,0.15); color: var(--success); }
+  .tag-blue { background: rgba(59,130,246,0.15); color: #3b82f6; }
+  .tag-yellow { background: rgba(245,158,11,0.15); color: var(--warning); }
+  .tag-red { background: rgba(239,68,68,0.15); color: var(--danger); }
+
+  .payment-detail {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ===== SKILL CARDS ===== */
+  .skill-card {
+    border-radius: 16px;
+    padding: 28px;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+    background: white;
+  }
+
+  .skill-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .skill-emoji {
+    font-size: 36px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-bg);
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .skill-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  .skill-level {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .skill-earning {
+    display: inline-block;
+    background: rgba(245,166,35,0.15);
+    color: #b45309;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .sources-box {
+    background: var(--light-bg);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 14px;
+  }
+
+  .sources-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+
+  .source-link {
+    display: inline-block;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #3b82f6;
+    margin: 3px;
+    text-decoration: none;
+    direction: ltr;
+  }
+
+  /* ===== INSTAGRAM SECTION ===== */
+  .insta-gradient {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    border-radius: 16px;
+    padding: 30px;
+    color: white;
+    margin: 24px 0;
+  }
+
+  .insta-title {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+
+  .insta-sub {
+    font-size: 15px;
+    opacity: 0.85;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .insta-tips {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .insta-tip {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 20px;
+    border-right: 4px solid;
+  }
+
+  .insta-tip.t1 { border-color: #833ab4; }
+  .insta-tip.t2 { border-color: #fd1d1d; }
+  .insta-tip.t3 { border-color: #fcb045; }
+  .insta-tip.t4 { border-color: #3b82f6; }
+
+  .tip-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  .tip-text {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ===== ROADMAP ===== */
+  .roadmap {
+    position: relative;
+    padding-right: 30px;
+  }
+
+  .roadmap::before {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--gold));
+  }
+
+  .roadmap-step {
+    position: relative;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    margin-right: 20px;
+  }
+
+  .roadmap-step::before {
+    content: attr(data-step);
+    position: absolute;
+    right: -34px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 13px;
+    z-index: 1;
+  }
+
+  .step-week {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  .step-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+
+  .step-actions {
+    list-style: none;
+    padding: 0;
+  }
+
+  .step-actions li {
+    font-size: 14px;
+    color: var(--text);
+    padding: 4px 0;
+    padding-right: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .step-actions li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: var(--success);
+    font-weight: 700;
+  }
+
+  /* ===== WARNING / NOTE BOXES ===== */
+  .note-box {
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .note-box.info { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); }
+  .note-box.warning { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); }
+  .note-box.danger { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); }
+  .note-box.success { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); }
+
+  .note-icon { font-size: 24px; flex-shrink: 0; }
+  .note-content { font-size: 14px; color: var(--text); line-height: 1.7; margin: 0; }
+  .note-content strong { color: var(--primary); }
+
+  /* ===== FINAL CTA ===== */
+  .cta-page {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    padding: 80px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    page-break-before: always;
+  }
+
+  .cta-title {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .cta-title span { color: var(--gold); }
+
+  .cta-text {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+  }
+
+  .cta-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 32px 48px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .cta-box p {
+    color: rgba(255,255,255,0.8);
+    font-size: 15px;
+    margin: 6px 0;
+  }
+
+  .cta-box strong { color: var(--gold); }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    body { background: white; }
+    .chapter, .toc-page { page-break-before: always; }
+    .cover { page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="cover-badge">⭐ النسخة الكاملة — ٨ فصول</div>
+  <div class="cover-title">
+    دليل البداية
+    <span>بالفريلانس من العراق</span>
+  </div>
+  <div class="cover-divider"></div>
+  <div class="cover-subtitle">
+    كل شي تحتاج تعرفه عن الشغل الأون لاين — المنصات، الفلوس، المهارات، والخطة الكاملة للبداية من الصفر
+  </div>
+  <div class="cover-stats">
+    <div class="cover-stat"><span class="num">8</span><span class="lbl">فصول شاملة</span></div>
+    <div class="cover-stat"><span class="num">+15</span><span class="lbl">مصدر مجاني</span></div>
+    <div class="cover-stat"><span class="num">90</span><span class="lbl">يوم خطة بداية</span></div>
+  </div>
+  <div class="cover-year">الإصدار الأول • 2026</div>
+</div>
+
+<!-- ===== TOC ===== -->
+<div class="toc-page">
+  <div class="toc-header">فهرس <span>المحتوى</span></div>
+  <div class="toc-underline"></div>
+
+  <div class="toc-item">
+    <div class="toc-num">١</div>
+    <div class="toc-title">ما هو الفريلانس والعمل الحر؟</div>
+    <div class="toc-dots"></div>
+  </div>
+  <div class="toc-item">
+    <div class="toc-num">٢</div>
+    <div class="toc-title">المنصات المتاحة للعراقيين — والعقبات الحقيقية</div>
+    <div class="toc-dots"></div>
+  </div>
+  <div class="toc-item">
+    <div class="toc-num">٣</div>
+    <div class="toc-title">كيف تستلم فلوسك من العراق؟</div>
+    <div class="toc-dots"></div>
+  </div>
+  <div class="toc-item">
+    <div class="toc-num">٤</div>
+    <div class="toc-title">المهارات الرقمية وفرص العمل</div>
+    <div class="toc-dots"></div>
+  </div>
+  <div class="toc-item">
+    <div class="toc-num">٥</div>
+    <div class="toc-title">الإنستغرام — أفضل منصة للانطلاق</div>
+    <div class="toc-dots"></div>
+  </div>
+  <div class="toc-item">
+    <div class="toc-num">٦</div>
+    <div class="toc-title">خطة البداية لمن ليس عنده أي مهارة (90 يوم)</div>
+    <div class="toc-dots"></div>
+  </div>
+  <div class="toc-item">
+    <div class="toc-num">٧</div>
+    <div class="toc-title">خطتك التسويقية في صفحة واحدة</div>
+    <div class="toc-dots"></div>
+  </div>
+  <div class="toc-item">
+    <div class="toc-num">٨</div>
+    <div class="toc-title">الدروب شيبينق — بيع بدون مخزون من العراق</div>
+    <div class="toc-dots"></div>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 1 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل الأول</div>
+  <div class="chapter-title">ما هو <span>الفريلانس</span><br>والعمل الحر؟</div>
+  <div class="chapter-bar"></div>
+
+  <div class="lead-text">
+    الفريلانس ببساطة يعني إنك تشتغل لحالك — مو موظف عند أحد، تختار كلايينتاتك بنفسك، تحدد وقتك وسعرك، وتشتغل من أي مكان بالعالم.
+  </div>
+
+  <p>الفريلانس مو "شغلة جانبية" فقط — الكثير من الناس حول العالم يعتمد عليه كمصدر دخل رئيسي. الفرق الجوهري بينه وبين الوظيفة التقليدية هو الحرية والمسؤولية معاً.</p>
+
+  <h3>ليش الفريلانس مهم للعراقي تحديداً؟</h3>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <div class="card-title">سوق العمل المحلي ضيق</div>
+      <p class="card-text">البطالة بين الشباب العراقي مرتفعة، والوظائف الحكومية لم تعد تستوعب الجميع. الفريلانس يفتح سوقاً عالمياً بدون حدود.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💵</div>
+      <div class="card-title">الدخل بالدولار</div>
+      <p class="card-text">تشتغل بأسعار دولية مع تكاليف معيشة عراقية — هذا فارق ضخم يعطيك ميزة تنافسية هائلة.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏠</div>
+      <div class="card-title">الشغل من البيت</div>
+      <p class="card-text">لا حاجة لمواصلات أو ملابس رسمية أو دوام ثابت. كل ما تحتاجه لاب توب وانترنت.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📈</div>
+      <div class="card-title">لا سقف للدخل</div>
+      <p class="card-text">كلما تطورت مهاراتك وبنيت سمعتك، ترفع أسعارك. مو فيه راتب ثابت يقيدك.</p>
+    </div>
+  </div>
+
+  <h3>الفريلانس مقابل الوظيفة — المقارنة الصريحة</h3>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <div class="pros-title">✅ مميزات الفريلانس</div>
+      <ul>
+        <li>حرية كاملة بالوقت والمكان</li>
+        <li>دخل بالعملة الأجنبية</li>
+        <li>لا سقف للراتب</li>
+        <li>تطوير مستمر للمهارات</li>
+        <li>العمل مع كلايينتس من كل العالم</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <div class="cons-title">⚠️ التحديات الواقعية</div>
+      <ul>
+        <li>الدخل غير منتظم في البداية</li>
+        <li>تحتاج وقت لبناء السمعة</li>
+        <li>عقبات الدفع في العراق</li>
+        <li>منافسة عالمية شرسة</li>
+        <li>أنت المسؤول عن كل شي</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note-box info">
+    <div class="note-icon">💡</div>
+    <p class="note-content"><strong>حقيقة مهمة:</strong> الفريلانس مو طريق سريع للثروة — بس هو طريق حقيقي ومثبت للاستقلال المالي لمن يصبر ويتعلم ويتطور. أغلب الناجحين استغرقوا 3-6 أشهر قبل ما يحصلوا على أول كلاينت جيد.</p>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 2 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل الثاني</div>
+  <div class="chapter-title">المنصات المتاحة <span>للعراقيين</span></div>
+  <div class="chapter-bar"></div>
+
+  <div class="lead-text">
+    الحقيقة الصريحة: مو كل منصات الفريلانس تشتغل بالعراق بشكل طبيعي. هذا الفصل يوفر عليك أسابيع من التجريب والإحباط.
+  </div>
+
+  <div class="platform-card available">
+    <div class="platform-header">
+      <div class="platform-name">🟢 Freelancer.com</div>
+      <span class="platform-badge badge-available">متاح للعراق ✓</span>
+    </div>
+    <p class="platform-desc">أفضل نقطة بداية للعراقي. يدعم العراق رسمياً ويقبل التسجيل مباشرة. عمولته 10% على كل مشروع. المنافسة شديدة لكنه الأسهل للبدء. توقع أشهراً قبل الكلاينت الأول، وهذا طبيعي جداً.</p>
+  </div>
+
+  <div class="platform-card available">
+    <div class="platform-header">
+      <div class="platform-name">🟢 Khamsat.com (خمسات)</div>
+      <span class="platform-badge badge-available">عربي ✓</span>
+    </div>
+    <p class="platform-desc">منصة عربية 100% للخدمات المصغرة. مثالية للبداية لأن جمهورها عربي، والتواصل بالعربي أسهل، والمدفوعات عبر بطاقات عربية. عمولتها 20%. ممتازة لتبني أول portfolio عربي.</p>
+  </div>
+
+  <div class="platform-card available">
+    <div class="platform-header">
+      <div class="platform-name">🟢 Mostaql.com (مستقل)</div>
+      <span class="platform-badge badge-available">عربي ✓</span>
+    </div>
+    <p class="platform-desc">أكبر منصة عربية للمشاريع. أنت من تتقدم للمشاريع المنشورة من الشركات والأفراد. المنافسة أقل من المنصات العالمية والأسعار تناسب السوق العربي. ممتازة للبداية وبناء السمعة.</p>
+  </div>
+
+  <div class="platform-card unavailable">
+    <div class="platform-header">
+      <div class="platform-name">🔴 PayPal</div>
+      <span class="platform-badge badge-unavailable">غير متاح ✗</span>
+    </div>
+    <p class="platform-desc">غير متاح رسمياً في العراق. استخدام VPN أو أرقام أجنبية يعرض حسابك للإغلاق وتجميد رصيدك. لا تخاطر بأموالك — استخدم البدائل الآمنة في الفصل القادم.</p>
+  </div>
+
+  <div class="note-box success">
+    <div class="note-icon">🎯</div>
+    <p class="note-content"><strong>التوصية:</strong> ابدأ بـ <strong>خمسات أو مستقل</strong> للبناء السريع بدون عقبات، وبعد ما تجمع 5-10 تقييمات إيجابية، انتقل لـ <strong>Freelancer.com</strong> للوصول لكلايينتات عالميين.</p>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 3 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل الثالث</div>
+  <div class="chapter-title">كيف تستلم <span>فلوسك</span><br>من العراق؟</div>
+  <div class="chapter-bar"></div>
+
+  <div class="lead-text">
+    هذا الفصل هو قلب الدليل — لأن مهما كسبت أون لاين، ما ينفع إذا ما قدرت توصله لجيبك. الخبر الجيد: الحل موجود.
+  </div>
+
+  <div class="payment-grid">
+    <div class="payment-card recommended">
+      <div class="payment-title">💳 Payoneer</div>
+      <span class="payment-tag tag-green">⭐ الأفضل للعراق</span>
+      <p class="payment-detail">
+        <strong>الأنسب لمعظم العراقيين.</strong> يقبل التسجيل من العراق ويربط مع Freelancer.com وخمسات ومستقل. تستلم كارت Mastercard بالبريد (DHL) وتسحب من الصراف الآلي. أفضل أجهزة صراف: FIB وBBAC.
+        <br><br>
+        <strong>الرسوم:</strong> 3.15$ لكل سحب من الصراف + رسوم تحويل 2%.
+        <br><strong>الحد اليومي:</strong> 2,500$ عادةً.
+      </p>
+    </div>
+
+    <div class="payment-card secondary">
+      <div class="payment-title">🌐 Wise</div>
+      <span class="payment-tag tag-blue">للدفعات الكبيرة</span>
+      <p class="payment-detail">
+        <strong>أفضل معدل صرف في السوق.</strong> يدعم العراقيين مع بعض القيود. تقدر ترسل منه لبنوك عراقية محددة (FIB، Kurdistan International Bank، RT Bank).
+        <br><br>
+        <strong>الأنسب لـ:</strong> دفعات فوق 500$ حيث يوفر فرق الصرف الجيد مبالغ مهمة مقارنة بـ Payoneer.
+      </p>
+    </div>
+
+    <div class="payment-card warning">
+      <div class="payment-title">₿ الكريبتو (USDT)</div>
+      <span class="payment-tag tag-yellow">بديل متاح</span>
+      <p class="payment-detail">
+        رغم الحظر الرسمي، يستخدمه كثير من العراقيين. عملة USDT مستقرة ومربوطة بالدولار، رسومها قريبة من الصفر. فيه محلات صرافة في بغداد وأربيل والبصرة تشتريها.
+        <br><br>
+        <strong>تنبيه:</strong> يحمل مخاطر قانونية — ابحث جيداً قبل الاستخدام.
+      </p>
+    </div>
+
+    <div class="payment-card danger">
+      <div class="payment-title">🏦 تحويل مصرفي مباشر</div>
+      <span class="payment-tag tag-red">للمبالغ الكبيرة فقط</span>
+      <p class="payment-detail">
+        تحويل دولي مباشر لحسابك العراقي. يصلح لـ Kurdistan International Bank وFIB وRT Bank.
+        <br><br>
+        <strong>تنبيه:</strong> الرسوم الثابتة (~50$) تجعله خسارة للمبالغ الصغيرة — استخدمه فقط للمشاريع فوق 1,000$.
+      </p>
+    </div>
+  </div>
+
+  <h3>خطوات فتح حساب Payoneer من العراق</h3>
+  <div class="roadmap">
+    <div class="roadmap-step" data-step="١">
+      <div class="step-week">الخطوة الأولى</div>
+      <div class="step-title">افتح حساب بنكي محلي</div>
+      <ul class="step-actions">
+        <li>أي بنك عراقي يكفي — FIB وRafidain شائعان</li>
+        <li>تحتاجه لربط Payoneer لاحقاً</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٢">
+      <div class="step-week">الخطوة الثانية</div>
+      <div class="step-title">سجّل على Payoneer.com</div>
+      <ul class="step-actions">
+        <li>اختر "Freelancer / Individual"</li>
+        <li>ستحتاج هوية وعنوان سكن وبيانات البنك</li>
+        <li>الموافقة تأخذ 1-3 أيام عمل</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٣">
+      <div class="step-week">الخطوة الثالثة</div>
+      <div class="step-title">اطلب كارت Payoneer</div>
+      <ul class="step-actions">
+        <li>اطلبه بعد ما يصير عندك رصيد 30$+</li>
+        <li>يوصل عبر DHL خلال 2-3 أسابيع</li>
+        <li>رسوم التوصيل تختلف حسب منطقتك</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٤">
+      <div class="step-week">الخطوة الرابعة</div>
+      <div class="step-title">ربطه بمنصة الفريلانس</div>
+      <ul class="step-actions">
+        <li>في خمسات: اذهب للإعدادات ← طرق الدفع ← Payoneer</li>
+        <li>في Freelancer.com: نفس الخطوة تقريباً</li>
+        <li>الآن كل ما تكسبه يروح مباشرة لـ Payoneer</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note-box warning">
+    <div class="note-icon">⚠️</div>
+    <p class="note-content"><strong>مصدر مهم:</strong> موقع <strong>talent.krd/posts/how-to-get-paid-online-iraq</strong> هو أشمل دليل محدّث (2026) لاستلام الفلوس من العراق — اقرأه كاملاً.</p>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 4 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل الرابع</div>
+  <div class="chapter-title">المهارات الرقمية <span>وفرص العمل</span></div>
+  <div class="chapter-bar"></div>
+
+  <div class="lead-text">
+    لا تحتاج شهادة جامعية أو خبرة 5 سنوات لتبدأ. كل المهارات هذه تعلمتها مئات الآلاف حول العالم عبر الإنترنت من الصفر.
+  </div>
+
+  <!-- Skill 1 -->
+  <div class="skill-card">
+    <div class="skill-header">
+      <div class="skill-emoji">🎬</div>
+      <div>
+        <div class="skill-name">مونتاج الفيديو</div>
+        <div class="skill-level">مستوى البداية: متوسط • وقت التعلم: 2-3 أشهر</div>
+      </div>
+    </div>
+    <div class="skill-earning">💰 3-25 دولار للفيديو القصير • 100-500 دولار للمشاريع الكبيرة</div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">✅ المميزات</div>
+        <ul>
+          <li>طلب ضخم من اليوتيوبرز والشركات</li>
+          <li>تقدر تتعلم ببرامج مجانية (DaVinci)</li>
+          <li>كل بيزنس يحتاج محتوى فيديو</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">⚠️ التحديات</div>
+        <ul>
+          <li>يحتاج كمبيوتر قوي نسبياً</li>
+          <li>المنافسة عالية</li>
+          <li>وقت التسليم ضاغط أحياناً</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources-box">
+      <div class="sources-title">📚 مصادر التعلم:</div>
+      <a class="source-link" href="https://youtube.com">YouTube: "تعلم DaVinci Resolve"</a>
+      <a class="source-link" href="https://youtube.com/@videoediting_ar">YouTube: دورات مونتاج بالعربي</a>
+      <a class="source-link" href="https://capcut.com">CapCut للموبايل (مجاني)</a>
+    </div>
+  </div>
+
+  <!-- Skill 2 -->
+  <div class="skill-card">
+    <div class="skill-header">
+      <div class="skill-emoji">🎨</div>
+      <div>
+        <div class="skill-name">التصميم الجرافيكي</div>
+        <div class="skill-level">مستوى البداية: متوسط • وقت التعلم: 2-4 أشهر</div>
+      </div>
+    </div>
+    <div class="skill-earning">💰 5-50 دولار للشعار • 20-200 دولار للهوية البصرية</div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">✅ المميزات</div>
+        <ul>
+          <li>طلب لا ينتهي — كل بيزنس يحتاج تصميم</li>
+          <li>Canva مجاني وسهل للمبتدئين</li>
+          <li>تنوع المشاريع (شعارات، بنرات، سوشيال)</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">⚠️ التحديات</div>
+        <ul>
+          <li>سوق مشبع بالمبتدئين بأسعار منخفضة</li>
+          <li>يحتاج ذوق فني أساسي</li>
+          <li>Adobe باهظ الثمن للمبتدئ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources-box">
+      <div class="sources-title">📚 مصادر التعلم:</div>
+      <a class="source-link" href="https://canva.com">Canva.com (مجاني)</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "Canva بالعربي"</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "تصميم جرافيك للمبتدئين"</a>
+    </div>
+  </div>
+
+  <!-- Skill 3 -->
+  <div class="skill-card">
+    <div class="skill-header">
+      <div class="skill-emoji">📱</div>
+      <div>
+        <div class="skill-name">إدارة السوشيال ميديا والتسويق الرقمي</div>
+        <div class="skill-level">مستوى البداية: مبتدئ • وقت التعلم: 1-3 أشهر</div>
+      </div>
+    </div>
+    <div class="skill-earning">💰 100-500 دولار شهرياً لإدارة حساب واحد</div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">✅ المميزات</div>
+        <ul>
+          <li>لا يحتاج برامج معقدة</li>
+          <li>الطلب يتصاعد من الشركات العراقية</li>
+          <li>تقدر تبدأ بتعلمك الشخصي من انستغرامك</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">⚠️ التحديات</div>
+        <ul>
+          <li>يحتاج إثبات نتائج قبل ما تطلب أسعار عالية</li>
+          <li>الكلاينتات يطلبون إحصائيات ونتائج</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources-box">
+      <div class="sources-title">📚 مصادر التعلم:</div>
+      <a class="source-link" href="https://skillshop.google.com">Google Skillshop (مجاني تماماً)</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "التسويق الرقمي بالعربي"</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "Meta Blueprint شرح"</a>
+    </div>
+  </div>
+
+  <!-- Skill 4 -->
+  <div class="skill-card">
+    <div class="skill-header">
+      <div class="skill-emoji">✍️</div>
+      <div>
+        <div class="skill-name">كتابة المحتوى والكوبي رايتينج</div>
+        <div class="skill-level">مستوى البداية: مبتدئ • وقت التعلم: 1-2 شهر</div>
+      </div>
+    </div>
+    <div class="skill-earning">💰 5-30 دولار للمقال • 50-300 دولار لصفحة بيع احترافية</div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">✅ المميزات</div>
+        <ul>
+          <li>لا يحتاج أي برامج — فقط كتابة جيدة</li>
+          <li>ممتاز لمن يجيد العربية</li>
+          <li>طلب عالٍ من الشركات العربية</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">⚠️ التحديات</div>
+        <ul>
+          <li>يحتاج مهارة لغوية قوية</li>
+          <li>المنافسة بالعربي تزداد مع AI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources-box">
+      <div class="sources-title">📚 مصادر التعلم:</div>
+      <a class="source-link" href="https://youtube.com">YouTube: "كوبي رايتينج بالعربي"</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "كتابة المحتوى من الصفر"</a>
+      <a class="source-link" href="https://khamsat.com">تدرب على Khamsat (مجاني للتسجيل)</a>
+    </div>
+  </div>
+
+  <!-- Skill 5 -->
+  <div class="skill-card">
+    <div class="skill-header">
+      <div class="skill-emoji">💻</div>
+      <div>
+        <div class="skill-name">البرمجة وتطوير المواقع</div>
+        <div class="skill-level">مستوى البداية: صعب • وقت التعلم: 6-12 شهر</div>
+      </div>
+    </div>
+    <div class="skill-earning">💰 200-2000+ دولار للمشروع • من أعلى المجالات دخلاً</div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">✅ المميزات</div>
+        <ul>
+          <li>أعلى رواتب في سوق الفريلانس</li>
+          <li>مهارة نادرة ومطلوبة جداً</li>
+          <li>تفتح أبواب وظائف ريموت عالمية</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">⚠️ التحديات</div>
+        <ul>
+          <li>وقت تعلم طويل (6-12 شهر للأساسيات)</li>
+          <li>يحتاج تحديث مستمر</li>
+          <li>مشاريع أطول وأكثر تعقيداً</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources-box">
+      <div class="sources-title">📚 مصادر التعلم:</div>
+      <a class="source-link" href="https://freecodecamp.org">FreeCodeCamp (مجاني 100%)</a>
+      <a class="source-link" href="https://theodinproject.com">The Odin Project (مجاني 100%)</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "تعلم البرمجة بالعربي"</a>
+    </div>
+  </div>
+
+  <!-- Skill 6 -->
+  <div class="skill-card">
+    <div class="skill-header">
+      <div class="skill-emoji">🤖</div>
+      <div>
+        <div class="skill-name">خدمات الذكاء الاصطناعي والـ Prompting</div>
+        <div class="skill-level">مستوى البداية: مبتدئ • وقت التعلم: 2-4 أسابيع</div>
+      </div>
+    </div>
+    <div class="skill-earning">💰 مهارة جديدة وناشئة — فرصتها الحين</div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">✅ المميزات</div>
+        <ul>
+          <li>سوق ناشئ والمنافسة قليلة جداً</li>
+          <li>تعلمه سريع نسبياً</li>
+          <li>يضيف قيمة لكل المهارات الأخرى</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">⚠️ التحديات</div>
+        <ul>
+          <li>مجال جديد والسوق لازال يتشكل</li>
+          <li>يتطور بسرعة كبيرة</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources-box">
+      <div class="sources-title">📚 مصادر التعلم:</div>
+      <a class="source-link" href="https://learnprompting.org">learnprompting.org (مجاني)</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "Prompt Engineering بالعربي"</a>
+      <a class="source-link" href="https://youtube.com">YouTube: "ChatGPT للمبتدئين"</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 5 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل الخامس</div>
+  <div class="chapter-title">الإنستغرام<br><span>أفضل منصة للانطلاق</span></div>
+  <div class="chapter-bar"></div>
+
+  <div class="insta-gradient">
+    <div class="insta-title">📱 ليش الإنستغرام تحديداً؟</div>
+    <p class="insta-sub">لأن أغلب جمهورك العراقي موجود هناك، وهو أسهل مكان تثبت فيه مهارتك وتبني فيه ثقة الناس قبل ما يشتروا منك — وبالمجان.</p>
+  </div>
+
+  <h3>شنو تنشر على إنستغرامك بالضبط؟</h3>
+
+  <div class="insta-tips">
+    <div class="insta-tip t1">
+      <div class="tip-title">🎯 محتوى "قبل وبعد"</div>
+      <p class="tip-text">اعرض تحسن مهارتك أو عمل لكلاينت — هذا النوع من المحتوى يبني مصداقية فورية ويثير الفضول.</p>
+    </div>
+    <div class="insta-tip t2">
+      <div class="tip-title">💡 نصيحة مجانية يومية</div>
+      <p class="tip-text">انشر نصيحة قصيرة عملية كل يوم من مجالك. الناس تتابع من يعطيهم قيمة بدون مقابل.</p>
+    </div>
+    <div class="insta-tip t3">
+      <div class="tip-title">📖 شارك رحلتك</div>
+      <p class="tip-text">"اليوم الأول" ← "الأسبوع الأول" ← "أول كلاينت" — الناس تحب تتابع قصص حقيقية، مو فقط نجاحات.</p>
+    </div>
+    <div class="insta-tip t4">
+      <div class="tip-title">🎬 Reels قصيرة بمعلومة واحدة</div>
+      <p class="tip-text">أفضل محتوى يشتغل على الإنستغرام الحين هو Reels 15-30 ثانية بفكرة واحدة واضحة وعملية.</p>
+    </div>
+  </div>
+
+  <h3>الاستراتيجية الصحيحة لبيع خدماتك عبر الإنستغرام</h3>
+
+  <p>مو تنشر "أنا موجود وعندي خدمات" — هذا ما يشتغل. الاستراتيجية الصحيحة تمر بـ 3 مراحل:</p>
+
+  <div class="roadmap">
+    <div class="roadmap-step" data-step="١">
+      <div class="step-week">المرحلة الأولى — ابنِ الثقة</div>
+      <div class="step-title">انشر محتوى مفيد بدون بيع (4-8 أسابيع)</div>
+      <ul class="step-actions">
+        <li>شارك معلومات مجانية من مجالك</li>
+        <li>اعرض أعمالك حتى لو كانت تجريبية</li>
+        <li>تفاعل مع كل تعليق ورسالة</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٢">
+      <div class="step-week">المرحلة الثانية — الجذب</div>
+      <div class="step-title">ابدأ تذكر خدمتك بشكل طبيعي</div>
+      <ul class="step-actions">
+        <li>"لو تحتاج شي مشابه، راسلني بالـ DM"</li>
+        <li>انشر قصة نجاح كلاينت (بإذنه)</li>
+        <li>اعمل Story Poll عن موضوع يهم جمهورك</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٣">
+      <div class="step-week">المرحلة الثالثة — البيع</div>
+      <div class="step-title">حوّل المتابعين لزبائن</div>
+      <ul class="step-actions">
+        <li>الدفع عبر ZainCash أو FIB أو كاش</li>
+        <li>التسليم عبر واتساب أو ميل</li>
+        <li>اطلب تقييم من كل زبون لنشره</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note-box info">
+    <div class="note-icon">📌</div>
+    <p class="note-content"><strong>الخطأ الأكثر شيوعاً:</strong> الناس تبني حساب و"تنتظر" الزبائن. الإنستغرام مو محرك بحث — أنت تحتاج تذهب لجمهورك أنت. تفاعل مع حسابات في مجالك، رد على تعليقات، شارك في محادثات. هذا هو الوقود الحقيقي للنمو.</p>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 6 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل السادس</div>
+  <div class="chapter-title">خطة البداية <span>من الصفر</span><br>لمن ليس عنده مهارة</div>
+  <div class="chapter-bar"></div>
+
+  <div class="lead-text">
+    إذا ما عندك أي مهارة الحين، هذا لا يعني إنك محروم. يعني فقط إنك تحتاج 90 يوماً مركّزة قبل ما تبدأ تكسب. هذه الخطة صممت خصيصاً لك.
+  </div>
+
+  <div class="note-box warning">
+    <div class="note-icon">🎯</div>
+    <p class="note-content"><strong>قبل تبدأ:</strong> اختر مهارة واحدة فقط من الفصل الرابع وتمسك فيها. أكبر غلطة يسويها الناس هي إنهم يبدأون بكل شي وما يكملون شي. اختر الأسهل أو الأقرب لاهتماماتك.</p>
+  </div>
+
+  <h3>🗓️ الخطة كاملة — 90 يوم</h3>
+
+  <div class="roadmap">
+    <div class="roadmap-step" data-step="١">
+      <div class="step-week">الشهر الأول — التعلم (يوم 1-30)</div>
+      <div class="step-title">تعلم الأساسيات وابنِ أول أعمال</div>
+      <ul class="step-actions">
+        <li>خصص ساعة يومياً للتعلم من YouTube أو Udemy</li>
+        <li>طبّق كل شي تتعلمه مباشرة — لا تكتفِ بالمشاهدة</li>
+        <li>اعمل 3 مشاريع تجريبية مجانية (لصديق، أو لنفسك)</li>
+        <li>سجّل حساب إنستغرام متخصص وابدأ تنشر رحلتك</li>
+        <li>سجّل على Payoneer من الأسبوع الأول</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٢">
+      <div class="step-week">الشهر الثاني — البناء (يوم 31-60)</div>
+      <div class="step-title">ابنِ portfolio حقيقي واطرق الأبواب</div>
+      <ul class="step-actions">
+        <li>اعمل 5 أعمال بجودة تفخر فيها — هذا هو portfolio مالتك</li>
+        <li>سجّل على خمسات أو مستقل وحط أول خدمة</li>
+        <li>اعرض أعمالك على الإنستغرام بانتظام</li>
+        <li>راسل 5 أشخاص يحتاجون خدمتك وعرض عليهم بسعر رمزي</li>
+        <li>اقرأ كل المصادر المذكورة في الدليل</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٣">
+      <div class="step-week">الشهر الثالث — الكسب (يوم 61-90)</div>
+      <div class="step-title">ابدأ تتقاضى أجراً حقيقياً</div>
+      <ul class="step-actions">
+        <li>لديك الآن portfolio — ارفع أسعارك للمستوى الحقيقي</li>
+        <li>اطلب تقييمات من كل من خدمتهم</li>
+        <li>ابدأ تنشر محتوى عن نتائج عملك</li>
+        <li>كل 1,000 دينار تكسبها — استثمر جزء في تطوير مهارتك</li>
+        <li>لا تتوقف عن التعلم حتى وأنت تكسب</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>🔑 قواعد النجاح — لا تنساها</h3>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">⏰</div>
+      <div class="card-title">الثبات قبل الموهبة</div>
+      <p class="card-text">ساعة يومياً بانتظام أفضل بكثير من 10 ساعات ليوم واحد وبعدين توقف أسبوع.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🚫</div>
+      <div class="card-title">لا تبع وعوداً وهمية</div>
+      <p class="card-text">لا تقول "أضمن لك نتائج" أو أرقام خيالية. الصدق هو رأسمالك الحقيقي على المدى البعيد.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📸</div>
+      <div class="card-title">وثّق كل شي</div>
+      <p class="card-text">كل مشروع، كل إنجاز، كل تقييم — هذا هو مالتك ورقم الضغط مالتك مستقبلاً.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <div class="card-title">التطور المستمر</div>
+      <p class="card-text">المجال يتغير بسرعة. من يتوقف عن التعلم، يتأخر. خصص 20% من وقتك دائماً للتعلم.</p>
+    </div>
+  </div>
+
+  <div class="note-box success">
+    <div class="note-icon">🌟</div>
+    <p class="note-content"><strong>الحقيقة الأهم:</strong> ما فيه شخص ناجح بالفريلانس ما فشل أولاً. الفرق بين من نجح ومن ما نجح هو إنه ما وقف عند أول رفض أو أول مشروع خسره. كل كلاينت صعب هو درس مجاني. استمر.</p>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 7 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل السابع</div>
+  <div class="chapter-title">خطتك التسويقية <span>في صفحة واحدة</span></div>
+  <div class="chapter-bar"></div>
+
+  <div class="lead-text">
+    أغلب الفريلانسرز يشتغلون بشكل ممتاز — لكنهم يفشلون بالتسويق. لأنهم يسوّقون بدون خطة. هذا الفصل يعطيك إطار بسيط تبني عليه كل تسويقك من اليوم الأول.
+  </div>
+
+  <div class="note-box info">
+    <div class="note-icon">💡</div>
+    <p class="note-content"><strong>الفكرة الأساسية:</strong> التسويق الناجح مو عن نشر إعلانات كثيرة أو التواجد بكل منصة — هو عن بناء رحلة واضحة تأخذ الغريب من ما يعرفك إلى يشتري منك ويرشح عنك.</p>
+  </div>
+
+  <h3>الخطأ اللي يسويه كل مبتدئ</h3>
+
+  <p>لما تسأل أي فريلانسر مبتدئ "شنو خطتك التسويقية؟" يقولك: "أنشر على انستغرام، أعمل ريلز، أدفع إعلانات."</p>
+  <p>هذي تكتيكات — مو خطة. الفرق بين التكتيك والخطة مثل الفرق بين اللبن والبيت — اللبن مهم، بس بدون تصميم تحصل كومة مو بيت.</p>
+  <p>الخطة التسويقية تجيب لك <strong>نظام</strong> — مو مجرد نشاط عشوائي.</p>
+
+  <h3>الإطار الثلاثي — قبل، أثناء، بعد</h3>
+
+  <p>كل تسويق ناجح يمر بثلاث مراحل. فهمها يغير طريقة تفكيرك بالكامل:</p>
+
+  <div class="cards-grid">
+    <div class="card" style="border-top: 4px solid #e94560;">
+      <div class="card-icon">🎯</div>
+      <div class="card-title">قبل — جذب الغرباء</div>
+      <p class="card-text">الناس ما يعرفونك بعد. هدفك تخليهم يلاحظونك ويهتمون. مو تبيع — تجذب انتباه.</p>
+    </div>
+    <div class="card" style="border-top: 4px solid #f5a623;">
+      <div class="card-icon">🤝</div>
+      <div class="card-title">أثناء — تحويل المهتمين</div>
+      <p class="card-text">صاروا يعرفونك. الحين تبني الثقة وتقنعهم إنك الخيار الصح وتحولهم لزبائن.</p>
+    </div>
+    <div class="card" style="border-top: 4px solid #10b981;">
+      <div class="card-icon">⭐</div>
+      <div class="card-title">بعد — تحويل الزبون لمسوّق</div>
+      <p class="card-text">اشترى منك — الحين تخليه راضي لدرجة يحجي عنك لناس ثانية بدون ما تطلب منه.</p>
+    </div>
+  </div>
+
+  <!-- BEFORE PHASE -->
+  <h3>المرحلة الأولى — قبل: كيف يلاحظونك؟</h3>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px;">① حدد زبونك بالضبط — مو "الكل"</p>
+  <p>أكبر غلطة هي تقول "زبوني هو أي شخص يحتاج خدمتي." هذا يعني ما عندك زبون محدد — وبالتالي رسالتك ما توصل لأحد.</p>
+
+  <div class="note-box warning">
+    <div class="note-icon">✏️</div>
+    <p class="note-content">
+      <strong>اسأل نفسك:</strong><br>
+      — من هو الشخص اللي يستفيد أكثر من خدمتي؟<br>
+      — شنو مشكلته الحقيقية اللي يبي يحلها؟<br>
+      — وين يقضي وقته أون لاين؟<br>
+      — شنو يخليه يختارني أنا بالتحديد؟
+    </p>
+  </div>
+
+  <p><strong>مثال عراقي:</strong> بدل "أصمم لأي شخص" — قل "أصمم هويات بصرية لأصحاب المطاعم والكافيهات العراقيين اللي يريدون يبنون حضور احترافي على السوشيال ميديا."</p>
+  <p>هذا التحديد يخلي رسالتك تضرب بالقلب — لأن الشخص يحس إنك تحجي عنه هو تحديداً.</p>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px; margin-top:28px;">② اصنع رسالة تشيل ألمه — مو تمدح نفسك</p>
+  <p>الناس ما تشتري خدمات — تشتري حلول لمشاكلها. رسالتك لازم تتكلم عن ألمهم مو عن مهاراتك.</p>
+
+  <div class="pros-cons">
+    <div class="cons">
+      <div class="cons-title">❌ رسالة غلط</div>
+      <ul>
+        <li>"أنا مصمم جرافيك محترف بخبرة 3 سنوات"</li>
+        <li>"أقدم أفضل خدمات المونتاج بأسعار منافسة"</li>
+        <li>"متخصص بكتابة المحتوى الإبداعي"</li>
+      </ul>
+    </div>
+    <div class="pros">
+      <div class="pros-title">✅ رسالة صح</div>
+      <ul>
+        <li>"أساعدك تحصل على هوية بصرية تخلي زبائنك يثقون بك من أول نظرة"</li>
+        <li>"أحول فيديوهاتك لمحتوى يشد المشاهد ويخليه يكمل"</li>
+        <li>"أكتبلك محتوى يبيع بدون ما يحس الزبون إنه يتباع"</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px; margin-top:28px;">③ وصّل رسالتك للناس المناسبين</p>
+  <p>مو المهم تكون بكل مكان — المهم تكون بالمكان الصح. للفريلانسر العراقي المبتدئ:</p>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <div class="card-title">انستغرام — الأول</div>
+      <p class="card-text">Reels قصيرة بمعلومة مفيدة. نشر منتظم. تفاعل مع التعليقات. هذا يبني جمهور عضوي بدون إعلانات.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <div class="card-title">تيليغرام — الثاني</div>
+      <p class="card-text">قناة تيليغرام لنشر محتوى أعمق وبناء مجتمع أكثر التزاماً من متابعي انستغرام.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤲</div>
+      <div class="card-title">الشبكة الشخصية — الثالث</div>
+      <p class="card-text">أصدقاء، زملاء، عائلة — أول زبائنك غالباً من يعرفونك. لا تستهن بهذا المصدر أبداً.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <div class="card-title">المنصات — الرابع</div>
+      <p class="card-text">خمسات ومستقل وFreelancer. هنا تلكى زبائن ما يعرفونك أصلاً — أصعب بس ممكن.</p>
+    </div>
+  </div>
+
+  <!-- DURING PHASE -->
+  <h3>المرحلة الثانية — أثناء: كيف تحولهم لزبائن؟</h3>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px;">④ اجمع المهتمين بمكان تتواصل معهم</p>
+  <p>لما شخص يهتم بمحتواك — لا تتركه يمشي. اجمعه بقناة تيليغرام أو قائمة واتساب. هذا يعطيك القدرة تتواصل معه مباشرة بدون ما تعتمد على خوارزمية انستغرام.</p>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px; margin-top:28px;">⑤ ابنِ الثقة قبل البيع — قاعدة الـ 80/20</p>
+  <p>80% من محتواك يكون مفيد ومجاني — نصايح، معلومات، تجارب حقيقية. 20% فقط يكون عن خدماتك ومنتجاتك.</p>
+  <p>الناس لا تشتري من غريب — تشتري ممن تعرفه وتثق فيه. المحتوى المجاني هو طريقة تبني هذه الثقة بدون ما تدفع فلس.</p>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px; margin-top:28px;">⑥ اصنع عرضاً لا يرفضونه</p>
+
+  <div class="insta-tips">
+    <div class="insta-tip t1">
+      <div class="tip-title">🎁 أضف قيمة إضافية</div>
+      <p class="tip-text">بدل تنافس على السعر — أضف شي مجاني مع خدمتك. مراجعة مجانية، نسخة إضافية، استشارة قصيرة.</p>
+    </div>
+    <div class="insta-tip t2">
+      <div class="tip-title">🛡️ ضمان يشيل الخوف</div>
+      <p class="tip-text">"مو عجبك التصميم — أعيد من الصفر بدون رسوم إضافية." هذا يشيل أكبر عقبة عند الزبون.</p>
+    </div>
+    <div class="insta-tip t3">
+      <div class="tip-title">⏰ محدودية تحرك</div>
+      <p class="tip-text">"السعر هذا متاح هذا الأسبوع فقط" أو "عندي مقعدين فاضيين هذا الشهر." الندرة الحقيقية تحرك الناس.</p>
+    </div>
+    <div class="insta-tip t4">
+      <div class="tip-title">💬 دليل اجتماعي</div>
+      <p class="tip-text">تقييمات الزبائن السابقين هي أقوى أداة بيع عندك. اطلب تقييم من كل زبون وانشره.</p>
+    </div>
+  </div>
+
+  <!-- AFTER PHASE -->
+  <h3>المرحلة الثالثة — بعد: كيف يسوّقون لك؟</h3>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px;">⑦ سلّم أكثر مما وعدت</p>
+  <p>الزبون يتوقع شي معين — أعطه أكثر. سلّم قبل الموعد، أضف لمسة إضافية، تابعه بعد التسليم. هذا يحول الزبون العادي لـ "مشجع" يحجي عنك لكل معارفه.</p>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px; margin-top:28px;">⑧ ارفع قيمة كل زبون</p>
+  <p>أسهل بيعة هي للشخص اللي اشترى منك مرة. لا تنسى زبائنك القدامى:</p>
+  <div class="note-box success">
+    <div class="note-icon">💰</div>
+    <p class="note-content">
+      <strong>أفكار عملية:</strong><br>
+      — عرّض خدمة إضافية بعد التسليم ("تبي أضيف لك ستوري هايلايت بنفس التصميم؟")<br>
+      — أعطِ زبائنك القدامى سعر خاص لما يرجعون<br>
+      — تواصل معهم كل شهرين حتى لو ما عندك عرض
+    </p>
+  </div>
+
+  <p style="font-weight:700; color: var(--primary); font-size:17px; margin-top:28px;">⑨ اصنع نظام للتوصيات</p>
+  <p>الناس تحجي عن الخدمات الممتازة — بس أحياناً تحتاج تذكير. لا تنتظر التوصيات تجيك بدون ما تطلب.</p>
+
+  <div class="note-box info">
+    <div class="note-icon">🗣️</div>
+    <p class="note-content">
+      <strong>جملة بسيطة تجيب لك زبائن جدد:</strong><br>
+      بعد ما تسلّم وتتأكد الزبون راضي — قول له:<br>
+      <em>"سعيد إنك عجبتك الشغلة. لو تعرف أحد محتاج نفس الخدمة وتذكرني — أقدر أعطيك خصم على مشروعكم الجاي."</em><br><br>
+      هذه الجملة الواحدة تفتح باب زبائن جدد بدون أي تكلفة.
+    </p>
+  </div>
+
+  <!-- ONE PAGE PLAN -->
+  <h3>📋 خطتك التسويقية في صفحة واحدة — ملئها الحين</h3>
+
+  <div style="background: var(--primary); border-radius: 20px; padding: 32px; margin: 24px 0;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+
+      <div style="background: rgba(233,69,96,0.2); border: 2px solid rgba(233,69,96,0.4); border-radius: 12px; padding: 20px;">
+        <div style="color: #e94560; font-weight: 800; font-size: 13px; margin-bottom: 12px; letter-spacing: 1px;">قبل ← الجذب</div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">① زبوني المثالي هو:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">② رسالتي هي:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">③ أوصل رسالتي عبر:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+      </div>
+
+      <div style="background: rgba(245,166,35,0.15); border: 2px solid rgba(245,166,35,0.3); border-radius: 12px; padding: 20px;">
+        <div style="color: #f5a623; font-weight: 800; font-size: 13px; margin-bottom: 12px; letter-spacing: 1px;">أثناء ← التحويل</div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">④ أجمع المهتمين في:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">⑤ أبني الثقة عبر:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">⑥ عرضي هو:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+      </div>
+
+      <div style="background: rgba(16,185,129,0.15); border: 2px solid rgba(16,185,129,0.3); border-radius: 12px; padding: 20px;">
+        <div style="color: #10b981; font-weight: 800; font-size: 13px; margin-bottom: 12px; letter-spacing: 1px;">بعد ← الولاء</div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">⑦ تجربة الزبون عندي:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">⑧ أرفع قيمة الزبون عبر:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 6px;">⑨ نظام التوصيات:</div>
+          <div style="color: rgba(255,255,255,0.3); font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">اكتب هنا...</div>
+        </div>
+      </div>
+
+    </div>
+    <p style="color: rgba(255,255,255,0.4); font-size: 12px; text-align: center; margin-top: 20px;">اطبع هذه الصفحة وعلّقها أمامك — راجعها كل أسبوع</p>
+  </div>
+
+  <div class="note-box success">
+    <div class="note-icon">🎯</div>
+    <p class="note-content"><strong>القاعدة الذهبية:</strong> الخطة التسويقية البسيطة المطبّقة أفضل بألف مرة من الخطة المثالية المكتوبة بدفتر ما يفتحه أحد. ملّئ الجدول هذا اليوم، وابدأ تطبق، وعدّل مع الوقت.</p>
+  </div>
+</div>
+
+<!-- ===== CHAPTER 8 ===== -->
+<div class="chapter">
+  <div class="chapter-num">الفصل الثامن</div>
+  <div class="chapter-title">الدروب شيبينق<br><span>بيع بدون مخزون</span></div>
+  <div class="chapter-bar"></div>
+
+  <div class="lead-text">
+    تخيل إنك تبيع منتجات وتجيب ربح — بدون ما تشتري أي شي، بدون مخزون، بدون شحن. هذا بالضبط ما هو الدروب شيبينق. ولأول مرة، صار ممكن من العراق بشكل فعلي.
+  </div>
+
+  <h3>شنو هو الدروب شيبينق؟</h3>
+
+  <p>الفكرة بسيطة جداً — أنت وسيط بين المورد والمشتري:</p>
+
+  <div class="cards-grid">
+    <div class="card" style="border-top: 4px solid var(--accent);">
+      <div class="card-icon">1️⃣</div>
+      <div class="card-title">الزبون يشتري منك</div>
+      <p class="card-text">يدخل متجرك أو صفحتك ويطلب منتج ويدفع السعر اللي حددته أنت.</p>
+    </div>
+    <div class="card" style="border-top: 4px solid var(--gold);">
+      <div class="card-icon">2️⃣</div>
+      <div class="card-title">أنت تطلب من المورد</div>
+      <p class="card-text">تشتري نفس المنتج من المورد بسعر أقل وتعطيه عنوان الزبون.</p>
+    </div>
+    <div class="card" style="border-top: 4px solid var(--success);">
+      <div class="card-icon">3️⃣</div>
+      <div class="card-title">المورد يشحن مباشرة</div>
+      <p class="card-text">المورد يوصل المنتج للزبون مباشرة — أنت ما تلمس البضاعة أصلاً.</p>
+    </div>
+    <div class="card" style="border-top: 4px solid #3b82f6;">
+      <div class="card-icon">4️⃣</div>
+      <div class="card-title">تاخذ فرق السعر</div>
+      <p class="card-text">ربحك هو الفرق بين ما دفعه الزبون وما دفعته أنت للمورد.</p>
+    </div>
+  </div>
+
+  <div class="note-box info">
+    <div class="note-icon">💡</div>
+    <p class="note-content"><strong>مثال واقعي:</strong> تشوف منتج على AliExpress بـ 5 دولار. تبيعه على صفحتك بـ 15 دولار. الزبون يدفع 15، أنت تدفع 5 للمورد، وتاخذ 10 دولار ربح — بدون ما تلمس المنتج.</p>
+  </div>
+
+  <h3>التطبيقات العراقية المتاحة للدروب شيبينق</h3>
+
+  <p>هذا الجزء هو الأهم — لأن معظم منصات الدروب شيبينق العالمية ما تدعم العراق. بس الحين فيه حلول محلية حقيقية:</p>
+
+  <div class="platform-card available">
+    <div class="platform-header">
+      <div class="platform-name">🟢 فدشي (Fedshi)</div>
+      <span class="platform-badge badge-available">عراقي ✓</span>
+    </div>
+    <p class="platform-desc">
+      تطبيق عراقي 100% مصمم خصيصاً للدروب شيبينق المحلي. تسجل كبائع، تختار منتجات من الكتالوج، تبيعها بسعرك، وفدشي يتولى التخزين والشحن داخل العراق. الدفع بالدينار العراقي والتسليم محلي.
+      <br><br>
+      <strong>متاح على:</strong> Google Play وApp Store<br>
+      <strong>الدفع:</strong> كاش عند الاستلام أو ZainCash
+    </p>
+  </div>
+
+  <div class="platform-card available">
+    <div class="platform-header">
+      <div class="platform-name">🟢 موجود (Mawjood)</div>
+      <span class="platform-badge badge-available">عراقي ✓</span>
+    </div>
+    <p class="platform-desc">
+      منصة عراقية للتجارة الإلكترونية تتيح لك بيع منتجات بنظام الدروب شيبينق داخل العراق. تسجل كمسوّق، تختار المنتجات، وتبيعها عبر صفحتك على السوشيال ميديا. المنصة تتولى الشحن والتوصيل.
+      <br><br>
+      <strong>الميزة:</strong> تعمل مع منتجات محلية موجودة فعلاً بالمخازن — تسليم أسرع للزبون
+    </p>
+  </div>
+
+  <div class="platform-card limited">
+    <div class="platform-header">
+      <div class="platform-name">🟡 موها ستور (Moha Store)</div>
+      <span class="platform-badge badge-limited">متاح ⚠️</span>
+    </div>
+    <p class="platform-desc">
+      منصة دروب شيبينق تعمل بالعراق وتتيح لك بيع منتجات بدون مخزون. تسجل كبائع وتحصل على كتالوج منتجات تبيعها بهامش ربح تحدده أنت.
+      <br><br>
+      <strong>تنبيه:</strong> ابحث عن تجارب مستخدمين عراقيين قبل البدء للتأكد من موثوقية الشحن.
+    </p>
+  </div>
+
+  <h3>المميزات والعيوب — بصراحة كاملة</h3>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <div class="pros-title">✅ المميزات</div>
+      <ul>
+        <li>لا تحتاج رأس مال لشراء مخزون</li>
+        <li>لا تحتاج مكان لتخزين البضاعة</li>
+        <li>تقدر تبدأ من الموبايل فقط</li>
+        <li>مخاطر مالية منخفضة جداً</li>
+        <li>تقدر تغير المنتجات بأي وقت</li>
+        <li>الدفع بالدينار والكاش — مناسب للعراق</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <div class="cons-title">⚠️ التحديات</div>
+      <ul>
+        <li>هامش الربح أقل من البيع التقليدي</li>
+        <li>ما تتحكم بجودة الشحن والتغليف</li>
+        <li>لو المورد أخطأ — أنت المسؤول أمام الزبون</li>
+        <li>المنافسة عالية لأن الدخول سهل</li>
+        <li>تحتاج تسويق قوي عشان تبيع</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>كيف تبدأ خطوة بخطوة؟</h3>
+
+  <div class="roadmap">
+    <div class="roadmap-step" data-step="١">
+      <div class="step-week">الخطوة الأولى</div>
+      <div class="step-title">سجّل على فدشي أو موجود</div>
+      <ul class="step-actions">
+        <li>حمّل التطبيق من المتجر</li>
+        <li>سجّل كـ "بائع" أو "مسوّق"</li>
+        <li>اقرأ شروط العمل كاملة</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٢">
+      <div class="step-week">الخطوة الثانية</div>
+      <div class="step-title">اختر منتجاتك بذكاء</div>
+      <ul class="step-actions">
+        <li>ابحث عن منتجات عليها طلب — مو منتجات تحبها أنت</li>
+        <li>اختر منتجات خفيفة وسهلة الشحن</li>
+        <li>تجنب الإلكترونيات في البداية — أكثر شكاوى</li>
+        <li>ابدأ بـ 3-5 منتجات فقط لا أكثر</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٣">
+      <div class="step-week">الخطوة الثالثة</div>
+      <div class="step-title">سوّق عبر الإنستغرام وتيك توك</div>
+      <ul class="step-actions">
+        <li>انشر فيديوهات قصيرة للمنتج</li>
+        <li>اعمل مقارنات "قبل وبعد" للمنتجات</li>
+        <li>استخدم UGC — اطلب من زبائنك يصورون المنتج</li>
+        <li>الرد على كل تعليق وسؤال يبني الثقة</li>
+      </ul>
+    </div>
+    <div class="roadmap-step" data-step="٤">
+      <div class="step-week">الخطوة الرابعة</div>
+      <div class="step-title">ادر طلباتك وتابع الزبائن</div>
+      <ul class="step-actions">
+        <li>تابع كل طلب حتى يوصل للزبون</li>
+        <li>اتصل بالزبون بعد التسليم واسأله عن رأيه</li>
+        <li>اجمع التقييمات وانشرها</li>
+        <li>الزبون الراضي يجيبلك 3 زبائن جدد</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note-box warning">
+    <div class="note-icon">⚠️</div>
+    <p class="note-content"><strong>الحقيقة الصريحة:</strong> الدروب شيبينق مو "ربح سهل بدون شغل" — يحتاج تسويق قوي وخدمة زبائن ممتازة. الفرق بين من ينجح ومن يفشل هو في التسويق، مو في المنتج.</p>
+  </div>
+
+  <div class="note-box success">
+    <div class="note-icon">🎯</div>
+    <p class="note-content"><strong>مصادر تعلم مجانية:</strong><br>
+    YouTube: "فدشي شرح" — فيديوهات عراقيين جربوا التطبيق<br>
+    YouTube: "دروب شيبينق للمبتدئين بالعربي"<br>
+    YouTube: "كيف تبيع بدون مخزون العراق"</p>
+  </div>
+</div>
+
+<!-- ===== CTA PAGE ===== -->
+<div class="cta-page">
+  <div class="cta-title">الآن تعرف <span>كل شي</span><br>ما ينقصك إلا تبدأ</div>
+  <p class="cta-text">هذا الدليل جمع لك أسابيع من البحث في مكان واحد — وفّر عليك الوقت والفوضى. الخطوة الجاية تعتمد عليك أنت فقط.</p>
+  <div class="cta-box">
+    <p>📌 <strong>أول خطوة اليوم:</strong></p>
+    <p>اختر مهارة واحدة من الفصل الرابع</p>
+    <p>وخصص ساعة الليلة للبدء</p>
+    <br>
+    <p style="opacity:0.5; font-size:13px;">الإصدار الأول — 2026 | جميع المعلومات بناءً على بحث موثق</p>
+  </div>
+</div>
+
+</body>
+</html>
